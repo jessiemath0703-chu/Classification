@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jessie Math - 國小數學主題分類總表</title>
+
+<!-- ✅ 快取連結預覽（請放在 <head> 裡） -->
+  <meta name="description" content="© 2025–2026 Jessie Math 捷析老師. All rights reserved.">
+  <!-- ✅ LINE / FB 預覽用 -->
+  <meta property="og:title" content="Jessie Math - 國小數學主題分類總表">
+  <meta property="og:description" content="© 2025–2026 Jessie Math 捷析老師. All rights reserved.">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ 預覽圖片-->
+  <meta property="og:image" content="Classification.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1536">
+  <meta property="og:image:alt" content="Jessie Math 遊戲封面">
+
+  <!-- ✅ 有些平台會參考 -->
+  <link rel="image_src" href="Classification.png">
+
+  <!-- ✅ Twitter / X（可用同一張圖） -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jessie Math - 國小數學主題分類總表">
+  <meta name="twitter:description" content="© 2025–2026 Jessie Math 捷析老師. All rights reserved.">
+  <meta name="twitter:image" content="Classification.png">
+
+  <!-- 字體 / Icon（hero 區需要 Icon） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    :root{
+      --primary-color:#4a90e2;
+      --n-color:#e74c3c;
+      --s-color:#27ae60;
+      --r-color:#f39c12;
+      --d-color:#8e44ad;
+      --bg-color:#f8fafc;
+
+      --pill-bg:#f1f5f9;
+      --pill-border:#e2e8f0;
+      --pill-hover:#e8f1ff;
+      --shadow:0 4px 25px rgba(0,0,0,0.05);
+
+      /* ✅ Jessie Math hero 區品牌色 */
+      --brand-yellow:#FFD700;
+      --text-dark:#0f172a;
+      --text-gray:#64748b;
+      --header-bg: rgba(255,255,255,.92);
+
+      /* ✅ u 單位換算（新增，不影響原本） */
+      --u-color:#334155;
+      --u-bar:#334155;
+      --u-th:#f1f5f9;
+      --u-border:#e2e8f0;
+
+      /* ✅ 樹狀圖線條（保留變數不影響） */
+      --tree-line:#cbd5e1;
+      --tree-ink:#0f172a;
+      --tree-muted:#64748b;
+      --tree-glass:rgba(255,255,255,.75);
+    }
+
+    body{
+      font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+      background-color:var(--bg-color);
+      margin:0;
+      padding:20px;
+      color:#334155;
+    }
+
+    /* =========================
+       ✅ HERO / HEADER（照你提供的照片風格）
+       ========================= */
+    .jm-header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:var(--header-bg);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(226,232,240,.9);
+    }
+    .jm-header-inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:260px;
+    }
+    .avatar-ring{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      border:4px solid var(--brand-yellow);
+      background:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+      flex:0 0 auto;
+    }
+    .avatar-ring img{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      object-fit:contain;
+      background:transparent; /* ✅ 底色透明 */
+      display:block;
+    }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand-title{
+      font-size:22px;
+      font-weight:900;
+      letter-spacing:.3px;
+      color:var(--text-dark);
+    }
+    .brand-sub{
+      margin-top:6px;
+      font-size:13px;
+      color:var(--text-gray);
+      font-weight:600;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:900;
+      font-size:14px;
+      color:#0f172a;
+      background:transparent;
+      border:1px solid transparent;
+      transition:.2s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .nav-btn:hover{
+      background:#f1f5f9;
+      border-color:#e2e8f0;
+      transform:translateY(-1px);
+    }
+    .nav-btn.primary{
+      background:var(--brand-yellow);
+      border-color:transparent;
+      box-shadow:0 10px 24px rgba(255,215,0,.25);
+    }
+    .nav-btn.primary:hover{
+      transform:translateY(-1px);
+      filter:saturate(1.05);
+    }
+    .nav-btn.youtube{
+      color:#ef4444;
+    }
+    .nav-btn i{
+      font-size:15px;
+    }
+
+    /* ✅ 讓內容不會貼著 header */
+    .page-wrap{
+      padding-top:18px;
+    }
+
+    /* =========================
+       你原本的內容：完全不動（只接在下面）
+       ========================= */
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      background:#fff;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+      text-align:center;
+      color:var(--primary-color);
+      margin-bottom:30px;
+      letter-spacing:1px;
+    }
+
+    .tabs{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-bottom:20px;
+      border-bottom:2px solid #e2e8f0;
+      padding-bottom:10px;
+      flex-wrap:wrap;
+    }
+
+    .tab-btn{
+      padding:10px 20px;
+      cursor:pointer;
+      border:none;
+      background:none;
+      font-size:16px;
+      font-weight:800;
+      color:#64748b;
+      transition:.25s;
+      border-radius:10px;
+    }
+    .tab-btn:hover{ background:#f1f5f9; }
+    .tab-btn.active{ background-color:var(--primary-color); color:#fff; }
+
+    .tab-content{ display:none; }
+    .tab-content.active{ display:block; animation:fadeIn .35s; }
+    @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:15px;
+    }
+    th{
+      background-color:#f1f5f9;
+      padding:12px;
+      text-align:left;
+      border-bottom:2px solid #e2e8f0;
+    }
+    td{
+      padding:15px;
+      border-bottom:1px solid #f1f5f9;
+      line-height:1.8;
+      vertical-align:top;
+    }
+
+    .grade-title{
+      font-weight:900;
+      color:var(--primary-color);
+      width:110px;
+      white-space:nowrap;
+    }
+
+    /* ✅ 主題按鈕（可點擊連結） */
+    a.topic-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      background:var(--pill-bg);
+      padding:7px 12px;
+      border-radius:999px;
+      margin:6px 6px 0 0;
+      font-size:.92em;
+      border:1px solid var(--pill-border);
+      text-decoration:none;
+      color:#334155;
+      transition:.2s;
+      user-select:none;
+    }
+    a.topic-pill:hover{
+      transform:translateY(-1px);
+      background:var(--pill-hover);
+      border-color:#cbd5e1;
+      box-shadow:0 8px 18px rgba(0,0,0,0.06);
+    }
+    a.topic-pill:active{ transform:translateY(0px); }
+
+    .topic-num{
+      font-weight:900;
+      color:#475569;
+    }
+
+    .cat-header{
+      padding:10px 15px;
+      border-radius:10px;
+      margin-bottom:15px;
+      font-weight:900;
+    }
+    .n-style{ border-left:5px solid var(--n-color); background:#fef2f2; }
+    .s-style{ border-left:5px solid var(--s-color); background:#f0fdf4; }
+    .r-style{ border-left:5px solid var(--r-color); background:#fffbeb; }
+    .d-style{ border-left:5px solid var(--d-color); background:#faf5ff; }
+
+    /* 小提示條 */
+    .hint{
+      margin:10px 0 0;
+      padding:10px 12px;
+      border-radius:12px;
+      background:#f8fafc;
+      border:1px dashed #cbd5e1;
+      color:#64748b;
+      font-size:.92em;
+      line-height:1.6;
+    }
+    .hint b{ color:#0f172a; }
+
+    /* =========================
+       ✅ u 單位換算（新增，不影響原本）
+       ========================= */
+    .u-cat{
+      padding:10px 15px;
+      border-radius:10px;
+      margin-bottom:18px;
+      font-weight:900;
+      border-left:5px solid #0ea5e9;
+      background:#f0f9ff;
+      color:#0f172a;
+    }
+    .u-block{
+      border:1px solid var(--u-border);
+      border-radius:14px;
+      overflow:hidden;
+      margin:16px 0;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(0,0,0,0.04);
+    }
+    .u-bar{
+      background:var(--u-bar);
+      color:#fff;
+      padding:12px 14px;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      letter-spacing:.3px;
+    }
+    .u-badge{
+      font-size:12px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.18);
+      color:#fff;
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .u-table{
+      width:100%;
+      border-collapse:collapse;
+      margin:0;
+    }
+    .u-table th{
+      background:var(--u-th);
+      padding:12px;
+      text-align:center;
+      border-bottom:1px solid var(--u-border);
+      border-right:1px solid var(--u-border);
+      font-weight:900;
+      color:#0f172a;
+    }
+    .u-table td{
+      padding:14px 12px;
+      text-align:center;
+      border-bottom:1px solid var(--u-border);
+      border-right:1px solid var(--u-border);
+      color:#334155;
+      font-weight:700;
+    }
+    .u-table th:last-child,
+    .u-table td:last-child{ border-right:none; }
+    .u-rowhead{
+      background:#f8fafc;
+      font-weight:900 !important;
+      color:#0f172a !important;
+      white-space:nowrap;
+    }
+    .u-note{
+      font-size:13px;
+      color:#64748b;
+      font-weight:700;
+    }
+
+    /* ✅ 每個 u-block 對應遊戲按鈕列 */
+    .u-actions{
+      padding:12px 14px 14px;
+      border-top:1px solid var(--u-border);
+      background:#fff;
+    }
+    .u-actions-title{
+      font-weight:900;
+      color:#0f172a;
+      margin-bottom:6px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    /* =========================
+       ✅ 新增：u 單位換算 黃色框框（只框你指定的格子）
+       ========================= */
+    .u-mark{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:6px 10px;
+      border-radius:12px;
+      border:2px solid var(--brand-yellow);
+      background:rgba(255,215,0,.12);
+      box-shadow:0 10px 22px rgba(255,215,0,.18);
+      line-height:1;
+      font-weight:900;
+      color:#0f172a;
+      min-width:54px;
+    }
+    @media (max-width: 640px){
+      .u-mark{
+        padding:5px 9px;
+        border-radius:11px;
+        min-width:46px;
+      }
+    }
+
+    /* =========================
+       ✅ Footer（依你提供的結構）
+       ========================= */
+    footer{
+      max-width:1100px;
+      margin:18px auto 0;
+      padding:0 0 10px;
+    }
+    .footer-pill{
+      background:rgba(255,255,255,.92);
+      border:1px solid rgba(226,232,240,.95);
+      border-radius:999px;
+      padding:14px 18px;
+      box-shadow:0 10px 26px rgba(0,0,0,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      backdrop-filter: blur(10px);
+    }
+    .footer-left, .footer-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:220px;
+    }
+    .footer-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--brand-yellow);
+      box-shadow:0 0 0 6px rgba(255,215,0,.18);
+      flex:0 0 auto;
+    }
+    .footer-copy{
+      font-weight:800;
+      color:#0f172a;
+      font-size:13px;
+      letter-spacing:.2px;
+    }
+    .footer-icon{
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#f1f5f9;
+      border:1px solid #e2e8f0;
+      color:#0f172a;
+      flex:0 0 auto;
+    }
+    .footer-tagline{
+      font-weight:900;
+      color:#334155;
+      font-size:13px;
+      letter-spacing:.2px;
+    }
+
+    /* =========================
+       ✅ RWD（手機 / 平板 / 桌機）
+       只調比例與排版，不動你的內容結構
+       ========================= */
+    @media (max-width: 1024px){
+      body{ padding:16px; }
+      .container{ padding:26px; }
+      .jm-header-inner{ padding:12px 16px; }
+    }
+
+    @media (max-width: 820px){
+      .jm-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+      }
+      .nav-right{
+        width:100%;
+        justify-content:flex-start;
+      }
+      .container{ padding:22px; }
+      th, td{ padding:12px; }
+      .grade-title{ width:92px; }
+    }
+
+    @media (max-width: 640px){
+      body{ padding:14px; }
+      .page-wrap{ padding-top:14px; }
+      .brand-title{ font-size:20px; }
+      .brand-sub{ font-size:12px; }
+      .nav-btn{ padding:9px 12px; font-size:13px; }
+      .container{ padding:18px; border-radius:14px; }
+      h1{ font-size:22px; margin-bottom:18px; }
+      .tabs{ gap:8px; }
+      .tab-btn{ padding:9px 14px; font-size:14px; border-radius:12px; }
+      .grade-title{ width:78px; }
+
+      /* 表格在手機不爆版：讓按鈕自然換行 */
+      td{ line-height:1.7; }
+      a.topic-pill{ font-size:.9em; padding:7px 11px; }
+
+      .footer-pill{
+        border-radius:18px; /* 手機比較好看 */
+        padding:14px 14px;
+      }
+      .footer-left, .footer-right{
+        min-width:unset;
+        width:100%;
+      }
+      .footer-copy, .footer-tagline{ font-size:12.5px; }
+
+      /* ✅ u 單位換算表：手機更好讀 */
+      .u-bar{ padding:12px 12px; }
+      .u-table th, .u-table td{ padding:12px 10px; font-size:13px; }
+      .u-badge{ font-size:11.5px; padding:4px 9px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ HERO 區：品牌一致 -->
+  <header class="jm-header">
+    <div class="jm-header-inner">
+      <div class="brand-left">
+        <div class="avatar-ring">
+          <img src="JESSIEMATH-Q.png" alt="Jessie Math" />
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">Jessie Math</div>
+          <div class="brand-sub">捷析數學．遊戲大廳</div>
+        </div>
+      </div>
+
+      <nav class="nav-right" aria-label="Jessie Math 導覽">
+        <a class="nav-btn primary" href="https://jessiemath0703-chu.github.io/website2/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-house"></i>
+          大廳首頁
+        </a>
+
+        <a class="nav-btn" href="https://jessiemath0703-chu.github.io/Game-Lobby/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-gamepad"></i>
+          遊戲大廳
+        </a>
+
+        <a class="nav-btn youtube" href="https://www.youtube.com/@%E6%8D%B7%E6%9E%90JESSIEMATH" target="_blank" rel="noopener">
+          <i class="fa-brands fa-youtube"></i>
+          YouTube 頻道
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+    <div class="container">
+      <h1>📘 國小數學主題分類總表</h1>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event,'n-tab')">n 數與量</button>
+        <button class="tab-btn" onclick="openTab(event,'s-tab')">s 空間與形狀</button>
+        <button class="tab-btn" onclick="openTab(event,'r-tab')">r 關係</button>
+        <button class="tab-btn" onclick="openTab(event,'d-tab')">d 資料與不確定性</button>
+        <button class="tab-btn" onclick="openTab(event,'u-tab')">u 單位換算</button>
+      </div>
+
+      <!-- ===================== n ===================== -->
+      <div id="n-tab" class="tab-content active">
+        <div class="cat-header n-style">核心內容：整數、分數、小數運算與各種度量單位</div>
+        <table>
+          <tr><th>年級</th><th>相關主題</th></tr>
+
+          <tr>
+            <td class="grade-title">六年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u1" target="_blank" rel="noopener">
+                <small class="topic-num">主題一</small> 質因數與短除法
+              </a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u2" target="_blank" rel="noopener">
+                <small class="topic-num">主題二</small> 分數除法
+              </a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u5" target="_blank" rel="noopener">
+                <small class="topic-num">主題五</small> 小數除法
+              </a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u10" target="_blank" rel="noopener">
+                <small class="topic-num">主題十</small> 分數小數四則
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">五年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u2" target="_blank" rel="noopener"><small class="topic-num">主題二</small>倍數與因數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>公倍數與公因數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u7" target="_blank" rel="noopener"><small class="topic-num">主題七</small>擴分約分與加減</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>乘以幾分之一</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u11" target="_blank" rel="noopener"><small class="topic-num">主題十一</small>數的十進位結構</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u12" target="_blank" rel="noopener"><small class="topic-num">主題十二</small>分數的計算</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>小數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u21" target="_blank" rel="noopener"><small class="topic-num">主題二十一</small>小數加減</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">四年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u1" target="_blank" rel="noopener"><small class="topic-num">主題一</small>十萬以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u2" target="_blank" rel="noopener"><small class="topic-num">主題二</small>乘法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>假分數與帶分數</a>
+
+              <!-- ✅ 刪除：四年級 主題五 公里（你指定要刪） -->
+
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>除法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>二位小數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u11" target="_blank" rel="noopener"><small class="topic-num">主題十一</small>概數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>分數(一)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u16" target="_blank" rel="noopener"><small class="topic-num">主題十六</small>小數乘法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u18" target="_blank" rel="noopener"><small class="topic-num">主題十八</small>分數(二)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u21" target="_blank" rel="noopener"><small class="topic-num">主題二十一</small>多位數乘除</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">三年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u1" target="_blank" rel="noopener"><small class="topic-num">主題一</small>一萬以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u3" target="_blank" rel="noopener"><small class="topic-num">主題三</small>一萬以內的加減</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>乘法</a>
+
+              <!-- ✅ 刪除：三年級 主題五 毫米與數線 -->
+              <!-- ✅ 刪除：三年級 主題七 公斤與公克 -->
+              <!-- ✅ 刪除：三年級 主題十一 公升與毫升 -->
+
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>除法(一)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>分數(一)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u10" target="_blank" rel="noopener"><small class="topic-num">主題十</small>除法(二)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u12" target="_blank" rel="noopener"><small class="topic-num">主題十二</small>分數加法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u15" target="_blank" rel="noopener"><small class="topic-num">主題十五</small>一位小數</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">二年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u1" target="_blank" rel="noopener"><small class="topic-num">主題一</small>200以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u2" target="_blank" rel="noopener"><small class="topic-num">主題二</small>二位數加減</a>
+
+              <!-- ✅ 刪除：二年級 主題三 認識公分 -->
+
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u7" target="_blank" rel="noopener"><small class="topic-num">主題七</small>乘法(一)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>乘法(二)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u11" target="_blank" rel="noopener"><small class="topic-num">主題十一</small>1000以內的數</a>
+
+              <!-- ✅ 刪除：二年級 主題十二 重量 -->
+
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>加加減減</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u15" target="_blank" rel="noopener"><small class="topic-num">主題十五</small>乘法(特殊)</a>
+
+              <!-- ✅ 刪除：二年級 主題十六 公尺與公分 -->
+
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u20" target="_blank" rel="noopener"><small class="topic-num">主題二十</small>認識分數</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">一年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u1" target="_blank" rel="noopener"><small class="topic-num">主題一</small>10以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>10以內加法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u7" target="_blank" rel="noopener"><small class="topic-num">主題七</small>10以內減法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>30以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u10" target="_blank" rel="noopener"><small class="topic-num">主題十</small>20以內加法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u12" target="_blank" rel="noopener"><small class="topic-num">主題十二</small>20以內減法</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>100以內的數</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u15" target="_blank" rel="noopener"><small class="topic-num">主題十五</small>錢幣</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u17" target="_blank" rel="noopener"><small class="topic-num">主題十七</small>兩位數加減</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ===================== s ===================== -->
+      <div id="s-tab" class="tab-content">
+        <div class="cat-header s-style">核心內容：圖形性質、角度、面積、體積與表面積</div>
+        <table>
+          <tr><th>年級</th><th>相關主題</th></tr>
+
+          <tr>
+            <td class="grade-title">六年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u7" target="_blank" rel="noopener"><small class="topic-num">主題七</small>圓與扇形周長</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>放大縮小與比例尺</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u11" target="_blank" rel="noopener"><small class="topic-num">主題十一</small>圓與扇形面積</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u15" target="_blank" rel="noopener"><small class="topic-num">主題十五</small>角柱與圓柱</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">五年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u3" target="_blank" rel="noopener"><small class="topic-num">主題三</small>平面圖形</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u5" target="_blank" rel="noopener"><small class="topic-num">主題五</small>立體形體</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>面積</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u10" target="_blank" rel="noopener"><small class="topic-num">主題十</small>扇形</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>體積</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u17" target="_blank" rel="noopener"><small class="topic-num">主題十七</small>容積</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u19" target="_blank" rel="noopener"><small class="topic-num">主題十九</small>表面積</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u20" target="_blank" rel="noopener"><small class="topic-num">主題二十</small>線對稱圖形</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">四年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u3" target="_blank" rel="noopener"><small class="topic-num">主題三</small>角度</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u7" target="_blank" rel="noopener"><small class="topic-num">主題七</small>三角形與全等</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>垂直平行四邊形</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u15" target="_blank" rel="noopener"><small class="topic-num">主題十五</small>形體大小</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u17" target="_blank" rel="noopener"><small class="topic-num">主題十七</small>周長面積</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">三年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u2" target="_blank" rel="noopener"><small class="topic-num">主題二</small>角與形狀</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>圓</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u18" target="_blank" rel="noopener"><small class="topic-num">主題十八</small>面積</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">二年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u10" target="_blank" rel="noopener"><small class="topic-num">主題十</small>面大小比較</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>平面立體圖形</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">一年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u5" target="_blank" rel="noopener"><small class="topic-num">主題五</small>認識形狀</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>形狀立體形體</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ===================== r ===================== -->
+      <div id="r-tab" class="tab-content">
+        <div class="cat-header r-style">核心內容：時間應用、數量規律、比率、速率與應用題</div>
+        <table>
+          <tr><th>年級</th><th>相關主題</th></tr>
+
+          <tr>
+            <td class="grade-title">六年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u3" target="_blank" rel="noopener"><small class="topic-num">主題三</small>規律問題</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>比與比值</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>兩量關係與比</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>怎樣解題(一)</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u12" target="_blank" rel="noopener"><small class="topic-num">主題十二</small>速率</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>怎樣解題(二)</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">五年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>四則運算</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u16" target="_blank" rel="noopener"><small class="topic-num">主題十六</small>時間乘除</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u18" target="_blank" rel="noopener"><small class="topic-num">主題十八</small>比率百分率</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">四年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>兩步驟問題</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u12" target="_blank" rel="noopener"><small class="topic-num">主題十二</small>四則運算</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u19" target="_blank" rel="noopener"><small class="topic-num">主題十九</small>時間計算</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u20" target="_blank" rel="noopener"><small class="topic-num">主題二十</small>規律</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">三年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>列表規律</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u14" target="_blank" rel="noopener"><small class="topic-num">主題十四</small>兩步驟問題</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u16" target="_blank" rel="noopener"><small class="topic-num">主題十六</small>時間</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u17" target="_blank" rel="noopener"><small class="topic-num">主題十七</small>乘與除</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">二年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>加減應用</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u6" target="_blank" rel="noopener"><small class="topic-num">主題六</small>加減兩步驟</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u8" target="_blank" rel="noopener"><small class="topic-num">主題八</small>時間</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u17" target="_blank" rel="noopener"><small class="topic-num">主題十七</small>乘加兩步驟</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u18" target="_blank" rel="noopener"><small class="topic-num">主題十八</small>年月日</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u19" target="_blank" rel="noopener"><small class="topic-num">主題十九</small>分裝平分</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">一年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u2" target="_blank" rel="noopener"><small class="topic-num">主題二</small>比長短</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u3" target="_blank" rel="noopener"><small class="topic-num">主題三</small>順序與多少</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u4" target="_blank" rel="noopener"><small class="topic-num">主題四</small>分與合</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u9" target="_blank" rel="noopener"><small class="topic-num">主題九</small>時間</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u11" target="_blank" rel="noopener"><small class="topic-num">主題十一</small>長度</a>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u16" target="_blank" rel="noopener"><small class="topic-num">主題十六</small>月曆星期</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ===================== d ===================== -->
+      <div id="d-tab" class="tab-content">
+        <div class="cat-header d-style">核心內容：統計圖表報讀、資料分類與可能性</div>
+        <table>
+          <tr><th>年級</th><th>相關主題</th></tr>
+
+          <tr>
+            <td class="grade-title">六年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u13" target="_blank" rel="noopener"><small class="topic-num">主題十三</small>統計圖表</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">五年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u1" target="_blank" rel="noopener"><small class="topic-num">主題一</small>折線圖</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">四年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u10" target="_blank" rel="noopener"><small class="topic-num">主題十</small>統計圖表</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">三年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u19" target="_blank" rel="noopener"><small class="topic-num">主題十九</small>報讀表格</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="grade-title">一年級</td>
+            <td>
+              <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u18" target="_blank" rel="noopener"><small class="topic-num">主題十八</small>分類整理</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ===================== u 單位換算（新增） ===================== -->
+      <div id="u-tab" class="tab-content">
+        <div class="u-cat">核心工具：度量衡單位對照與換算規則</div>
+
+        <!-- 長度與距離 -->
+        <div class="u-block">
+          <div class="u-bar">
+            長度與距離
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u11" target="_blank" rel="noopener"><small class="topic-num">一年級</small> 主題十一 長度</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u3" target="_blank" rel="noopener"><small class="topic-num">二年級</small> 主題三 認識公分</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u16" target="_blank" rel="noopener"><small class="topic-num">二年級</small> 主題十六 公尺與公分</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u5" target="_blank" rel="noopener"><small class="topic-num">三年級</small> 主題五 毫米與數線</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u5" target="_blank" rel="noopener"><small class="topic-num">四年級</small> 主題五 公里</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">常用單位</th>
+              <th><span class="u-mark">公里</span></th>
+              <th>公引</th>
+              <th>公丈</th>
+              <th><span class="u-mark">公尺(米)</span></th>
+              <th>公寸</th>
+              <th><span class="u-mark">公分</span></th>
+              <th><span class="u-mark">毫米(公釐)</span></th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">英文簡寫</td>
+              <td>km</td>
+              <td>hm</td>
+              <td>dam</td>
+              <td>m</td>
+              <td>dm</td>
+              <td>cm</td>
+              <td>mm</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 時間 -->
+        <div class="u-block">
+          <div class="u-bar">
+            時間
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g1-u9" target="_blank" rel="noopener"><small class="topic-num">一年級</small> 主題九 時間</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u8" target="_blank" rel="noopener"><small class="topic-num">二年級</small> 主題八 時間</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u16" target="_blank" rel="noopener"><small class="topic-num">三年級</small> 主題十六 時間</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u19" target="_blank" rel="noopener"><small class="topic-num">四年級</small> 主題十九 時間計算</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u16" target="_blank" rel="noopener"><small class="topic-num">五年級</small> 主題十六 時間乘除</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">項目</th>
+              <th>換算進率</th>
+              <th>常用簡寫</th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">日</td>
+              <td>1 日 = 24 時</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td class="u-rowhead">時</td>
+              <td>1 時 = 60 分</td>
+              <td>h</td>
+            </tr>
+            <tr>
+              <td class="u-rowhead">分</td>
+              <td>1 分 = 60 秒</td>
+              <td>min</td>
+            </tr>
+            <tr>
+              <td class="u-rowhead">秒</td>
+              <td>基準單位</td>
+              <td>s</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 重量 -->
+        <div class="u-block">
+          <div class="u-bar">
+            重量
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g2-u12" target="_blank" rel="noopener"><small class="topic-num">二年級</small> 主題十二 重量</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u7" target="_blank" rel="noopener"><small class="topic-num">三年級</small> 主題七 公斤與公克</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u15" target="_blank" rel="noopener"><small class="topic-num">五年級</small> 主題十五 生活中的大單位</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">常用單位</th>
+              <th><span class="u-mark">公噸(t)</span></th>
+              <th>公擔(q)</th>
+              <th>公衡(mag)</th>
+              <th><span class="u-mark">公斤(kg)</span></th>
+              <th>公兩(hg)</th>
+              <th>公錢(dag)</th>
+              <th><span class="u-mark">公克(g)</span></th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">備註</td>
+              <td>1000 kg</td>
+              <td>100 kg</td>
+              <td>10 kg</td>
+              <td>1000 g</td>
+              <td>100 g</td>
+              <td>10 g</td>
+              <td>1 g</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 容量 -->
+        <div class="u-block">
+          <div class="u-bar">
+            容量
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u11" target="_blank" rel="noopener"><small class="topic-num">三年級</small> 主題十一 公升與毫升</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u17" target="_blank" rel="noopener"><small class="topic-num">五年級</small> 主題十七 容積</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">常用單位</th>
+              <th><span class="u-mark">公秉(kl)</span></th>
+              <th>公斗(dal)</th>
+              <th><span class="u-mark">公升(l)</span></th>
+              <th><span class="u-mark">公升、公撮(ml)</span></th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">換算</td>
+              <td>1 kl = 1000 l</td>
+              <td>1 dal = 10 l</td>
+              <td>1 l = 1000 ml</td>
+              <td>基準對照</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 面積 -->
+        <div class="u-block">
+          <div class="u-bar">
+            面積
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u8" target="_blank" rel="noopener"><small class="topic-num">五年級</small> 主題八 面積</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g3-u18" target="_blank" rel="noopener"><small class="topic-num">三年級</small> 主題十八 面積</a>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g4-u17" target="_blank" rel="noopener"><small class="topic-num">四年級</small> 主題十七 周長面積</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">常用單位</th>
+              <th>平方公里</th>
+              <th>公頃(hm<sup>2</sup>)</th>
+              <th>公畝(dam<sup>2</sup>)</th>
+              <th>平方公尺</th>
+              <th>平方公分</th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">英文簡寫</td>
+              <td>km<sup>2</sup></td>
+              <td>ha</td>
+              <td>a</td>
+              <td>m<sup>2</sup></td>
+              <td>cm<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td class="u-rowhead">換算參考</td>
+              <td>1,000,000 m<sup>2</sup></td>
+              <td>10,000 m<sup>2</sup></td>
+              <td>100 m<sup>2</sup></td>
+              <td>1 m<sup>2</sup></td>
+              <td>0.0001 m<sup>2</sup></td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- 體積 -->
+        <div class="u-block">
+          <div class="u-bar">
+            體積
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g5-u13" target="_blank" rel="noopener"><small class="topic-num">五年級</small> 主題十三 體積</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">常用單位</th>
+              <th>立方公尺(m<sup>3</sup>)</th>
+              <th>立方公分(cm<sup>3</sup>)</th>
+              <th>對照</th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">換算</td>
+              <td>1 m<sup>3</sup> = 1,000,000 cm<sup>3</sup></td>
+              <td>1 cm<sup>3</sup></td>
+              <td>1 cm<sup>3</sup> = 1 ml</td>
+            </tr>
+          </table>
+          <div class="u-note" style="padding:12px 14px;">
+            補充：1 l = 1000 ml，且 1 cm<sup>3</sup> = 1 ml（常用對照）
+          </div>
+        </div>
+
+        <!-- 距離與時間結合（速率） -->
+        <div class="u-block">
+          <div class="u-bar">
+            距離與時間結合（速率）
+            <span class="u-badge">練習 → 對照表</span>
+          </div>
+
+          <div class="u-actions" style="border-top:none; border-bottom:1px solid var(--u-border);">
+            <div class="u-actions-title"><i class="fa-solid fa-gamepad"></i> 年級與單元</div>
+            <a class="topic-pill" href="https://jessiemath0703-chu.github.io/Game-Lobby/#g6-u12" target="_blank" rel="noopener"><small class="topic-num">六年級</small> 主題十二 速率</a>
+          </div>
+
+          <table class="u-table">
+            <tr>
+              <th class="u-rowhead">項目</th>
+              <th>換算 / 公式</th>
+              <th>常用簡寫</th>
+            </tr>
+            <tr>
+              <td class="u-rowhead">速率公式</td>
+              <td>速率 = 距離 ÷ 時間<br>距離 = 速率 × 時間</td>
+              <td>v</td>
+            </tr>
+            <tr>
+              <td class="u-rowhead">單位換算</td>
+              <td>1 m/s = 3.6 km/h</td>
+              <td>m/s, km/h</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-pill">
+        <div class="footer-left">
+          <div class="footer-dot" aria-hidden="true"></div>
+          <div class="footer-copy">© 2025–2026 Jessie Math 捷析老師. All rights reserved.</div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-icon" aria-hidden="true"><i class="fas fa-compass"></i></div>
+          <div class="footer-tagline">數學不迷路，Jessie 帶你走向理解。</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      const tabcontent = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
+      }
+
+      const tablinks = document.getElementsByClassName("tab-btn");
+      for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      const target = document.getElementById(tabName);
+      target.style.display = "block";
+      target.classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const first = document.getElementById("n-tab");
+      if (first) first.style.display = "block";
+    });
+  </script>
+</body>
+</html>
